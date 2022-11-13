@@ -524,8 +524,38 @@ button {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.portfolio-item:hover .overlay {
+  transform: translateY(0);
+}
+
 .portfolio-item-container {
   padding: 20px 24px;
+}
+
+.portfolio-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(100%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  display: flex;
+  align-items: center;
+  transition: transform 230ms;
+  user-select: none;
+}
+
+.overlay-text {
+  font-size: 18px;
+  line-height: 1.56;
+  color: var(--bg-color-main);
 }
 
 .portfolio-title {
@@ -539,24 +569,6 @@ button {
   font-size: 16px;
   line-height: calc(30 / 16);
   color: var(--text-color);
-}
-
-/* =============ANIMATION==================== */
-
-@keyframes bottom-to-top {
-  0% {
-    opacity: 0;
-    transform: translateY(150px);
-  }
-
-  50% {
-    opacity: 0, 6;
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* ====================MODAL WINDOW======================= */
