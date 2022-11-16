@@ -548,7 +548,7 @@ button {
   padding: 63px 24px;
   display: flex;
   align-items: center;
-  transition: transform 230ms;
+  transition: transform 230ms linear;
   user-select: none;
 }
 
